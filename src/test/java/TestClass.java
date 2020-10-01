@@ -41,6 +41,4 @@ public class TestClass {
         String wrongNumberText = driver.findElement(By.cssSelector("[data-test-id=phone] input")).getText();
         assertEquals("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.", wrongNumberText);
     }
-
-    
 }
