@@ -34,7 +34,7 @@ public class TestClass {
         driver.findElement(By.cssSelector(".checkbox__box")).click();
         driver.findElement(By.cssSelector(".button__text")).submit();
         String successText = driver.findElement(By.cssSelector("[data-test-id]")).getText();
-        assertEquals("  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", successText);
+        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", successText.trim());
         // тест проходит успешно;
     }
 
