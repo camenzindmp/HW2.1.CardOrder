@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestClass {
+
     private WebDriver driver;
 
     @BeforeAll
@@ -18,7 +20,7 @@ public class TestClass {
 
     @BeforeEach
     void setUp() {
-        driver = new ChromeDriver();
+        WebDriverManager.chromedriver().setup();
     }
 
     @AfterEach
