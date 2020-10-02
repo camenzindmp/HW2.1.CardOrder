@@ -15,12 +15,12 @@ public class TestClass {
 
     @BeforeAll
     static void driver() {
-        System.setProperty("webdriver.chrome.driver", "driver/win/chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
     void setUp() {
-        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
     }
 
     @AfterEach
