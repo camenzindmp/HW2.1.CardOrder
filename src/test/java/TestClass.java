@@ -13,18 +13,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestClass {
 
     private WebDriver driver;
-    private static ChromeOptions options;
 
     @BeforeAll
     static void driver() {
         WebDriverManager.chromedriver().setup();
-        options = new ChromeOptions();
-        options.addArguments("--headless");
     }
 
     @BeforeEach
     void setUp() {
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
     }
 
     @AfterEach
