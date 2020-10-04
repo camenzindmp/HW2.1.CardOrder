@@ -6,21 +6,25 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestClass {
 
     private WebDriver driver;
+    private static ChromeOptions options;
 
     @BeforeAll
     static void driver() {
         WebDriverManager.chromedriver().setup();
+        options = new ChromeOptions();
+        options.addArguments("--headless");
     }
 
     @BeforeEach
     void setUp() {
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
     }
 
     @AfterEach
