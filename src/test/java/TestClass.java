@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestClass {
 
     private WebDriver driver;
-//кца
+
     @BeforeAll
     static void driver() {
         WebDriverManager.chromedriver().setup();
