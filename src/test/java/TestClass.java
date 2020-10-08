@@ -12,6 +12,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestClass {
 
+    //тест сборки в CI
+
     private WebDriver driver;
     private static ChromeOptions options;
 
